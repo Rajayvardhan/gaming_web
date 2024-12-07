@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import img1 from "./FINUNIQUE LOGO.png"
 
 export const Footer: React.FC = () => {
   return (
@@ -9,9 +10,9 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img 
-              src="/logo.png" 
+              src={img1} 
               alt="Finunique Logo" 
-              className="h-16 w-auto mb-4"
+              className="h-20 w-auto mb-4"
             />
             <div className="text-gray-300 space-y-2">
               <p className="flex items-start gap-2">
