@@ -5,6 +5,7 @@ import img1 from './FINUNIQUE LOGO.png';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to handle mobile menu toggle
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,10 @@ export const Navbar: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle menu state
+  };
 
   return (
     <nav
@@ -42,6 +47,7 @@ export const Navbar: React.FC = () => {
             />
           </Link>
 
+          {/* Desktop Links */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               <Link 
@@ -71,13 +77,50 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
+          {/* Mobile Menu Toggle Button */}
           <div className="md:hidden">
-            <button className="p-2">
+            <button onClick={toggleMenu} className="p-2">
               <Menu size={24} />
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-primary text-white px-4 py-2">
+          <div className="flex flex-col space-y-4">
+            <Link 
+              to="/" 
+              onClick={toggleMenu} 
+              className="hover:bg-white hover:text-black px-3 py-2 rounded-md transition-colors"
+            >
+              Home
+            </Link>
+            <Link 
+              to="/games" 
+              onClick={toggleMenu} 
+              className="hover:bg-white hover:text-black px-3 py-2 rounded-md transition-colors"
+            >
+              Games
+            </Link>
+            <Link 
+              to="/about" 
+              onClick={toggleMenu} 
+              className="hover:bg-white hover:text-black px-3 py-2 rounded-md transition-colors"
+            >
+              About
+            </Link>
+            <Link 
+              to="/responsible-gaming" 
+              onClick={toggleMenu} 
+              className="hover:bg-white hover:text-black px-3 py-2 rounded-md transition-colors"
+            >
+              Responsible Gaming
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
