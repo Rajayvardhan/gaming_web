@@ -7,27 +7,26 @@ export const Games: React.FC = () => {
   return (
     <div>
       {/* Games Banner */}
-      <div className=" bg-primary text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4 mt-12 text-center">Our Games Collection</h1>
-          <p className="text-xl text-center text-blue-200 mb-8">
-            Discover a world of exciting card games with real cash prizes
-          </p>
-          
-          {/* Search and Filter */}
-          <div className="max-w-2xl mx-auto flex gap-4">
-            <div className="flex-1 relative">
-              <input
-                type="text"
-                placeholder="Search games..."
-                className="w-full px-4 py-2 rounded-lg text-gray-900 pl-10"
+      <div
+        className="relative bg-primary text-white bg-cover py-16 bg-center sm:px-4 lg:px-8 sm:before:flex-1"
+        style={{
+          backgroundImage: "url('/bg.png')",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:pt-20 md:py-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 text-center md:text-left">
+              Get Ready to Win Real Money! Get Rummy World Right Now!
+            </h1>
+
+            <div className="flex justify-center">
+              <img
+                src="/mobile.png"
+                alt="Mobile App"
+                className="w-full max-w-xs md:max-w-md lg:max-w-lg"
               />
-              <Search className="absolute left-3 top-2.5 text-gray-500" size={20} />
             </div>
-            <button className=" bg-secondary px-4 py-2 rounded-lg flex items-center gap-2">
-              <Filter size={20} />
-              Filter
-            </button>
           </div>
         </div>
       </div>
@@ -35,6 +34,7 @@ export const Games: React.FC = () => {
       {/* Games Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
           {games.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}

@@ -5,7 +5,7 @@ import img1 from './FINUNIQUE LOGO.png';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to handle mobile menu toggle
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,14 +18,13 @@ export const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup listener on unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle menu state
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   return (
@@ -34,7 +33,7 @@ export const Navbar: React.FC = () => {
         isScrolled ? 'bg-primary text-white shadow-lg' : 'bg-transparent text-white'
       }`}
       style={{
-        backdropFilter: isScrolled ? 'none' : 'blur(10px)', // Blur only when not scrolled
+        backdropFilter: isScrolled ? 'none' : 'blur(10px)', 
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +42,7 @@ export const Navbar: React.FC = () => {
             <img 
               src={img1} 
               alt="Finunique Logo" 
-              className="h-20 w-auto"
+              className="h-20 w-auto py-2"
             />
           </Link>
 
