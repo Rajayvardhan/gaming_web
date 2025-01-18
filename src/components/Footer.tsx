@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><Link to="/terms" className="text-gray-300 hover:text-white">Terms & Conditions</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
-              <li><Link to="/refund" className="text-gray-300 hover:text-white">Refund Policy</Link></li>
+              <li><Link to="/refunds" className="text-gray-300 hover:text-white">Refund </Link></li>
             </ul>
           </div>
           <div>
