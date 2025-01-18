@@ -7,6 +7,7 @@ import { About } from './pages/About';
 import { Games } from './pages/Games';
 import { ResponsibleGaming } from './pages/ResponsibleGaming';
 import { Terms } from './pages/Terms';
+import { Refund } from './pages/Refund';
 import { Privacy } from './pages/Privacy';
 import { GameTutorial } from './pages/GameTutorial';
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/responsible-gaming" element={<ResponsibleGaming />} />
             <Route path="/terms" element={<Terms />} />
+             <Route path="/refund" element={<Refund/>} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/game/:gameId" element={<GameTutorial />} />
           </Routes>
