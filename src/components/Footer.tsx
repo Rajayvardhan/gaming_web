@@ -21,11 +21,11 @@ export const Footer: React.FC = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Mail size={20} />
-                <a href="mailto:Info@finunique.in" className="hover:text-white">Info@finunique.in</a>
+                <a href="mailto:Info@finunique.in" className="hover:text-white">support@rummycircle.com</a>
               </p>
               <p className="flex items-center gap-2">
                 <Phone size={20} />
-                <a href="tel:7297026119" className="hover:text-white">7297026119</a>
+                <a href="tel:7297026119" className="hover:text-white">9660339514</a>
               </p>
             </div>
           </div>
