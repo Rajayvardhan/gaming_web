@@ -13,7 +13,7 @@ export const Refund: React.FC = () => {
             <ul className="list-disc pl-5 space-y-2">
               <li>Technical issues preventing access to services.</li>
               <li>Unauthorized transactions identified and reported within 7 days.</li>
-              <li>Duplicate payments for the same service.</li>
+              <li>Duplicate payments for the same as service.</li>
             </ul>
           </section>
 
